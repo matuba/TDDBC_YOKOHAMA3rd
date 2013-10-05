@@ -1,12 +1,22 @@
 package javaversion;
-import java.util.regex.Pattern;
-import java.util.regex.Matcher;
-public class JavaVersion {
 
-	public boolean isValid(String version) {
-		Pattern p = Pattern.compile("^JDK[0-9]+u[0-9]+$");
-		Matcher m = p.matcher(version);
-		return m.find();
+
+public class JavaVersion {	
+	int familyNumber = 0;
+	int updateNumber = 0;
+
+	public JavaVersion(int familyNumber, int updateNumber) {
+		this.familyNumber =familyNumber;
+		this.updateNumber = updateNumber;
 	}
+
+	public int getFamilyNumber() {
+		return familyNumber;
+	}
+
+	public int getUpdateNumber() {
+		return updateNumber;
+	}
+		
 
 }
